@@ -15,7 +15,6 @@
 }
 
 body{
-   
     overflow: hidden scroll;
 }
 
@@ -114,9 +113,9 @@ body{
 .Simple .Simple__contain .Simple__contain--blue{
     position:absolute;
     top: 25%;
-    right: -100px;
+    right: 0;
     min-height: 180px;
-    width: 115%;
+    width: 80%;
     border-radius: 0 0 0 100px;
     background-color: var(--SoftBlue);
     z-index: -1;
