@@ -15,15 +15,15 @@
 }
 
 body{
-    overflow: hidden scroll;
+  
+    margin-top: 2rem;
 }
 
 
 
 .Header{
-    max-width: 500px;
-    
-    margin: 2rem 1.8rem;
+    width: 85%;
+    margin: 0 auto;
     height: 2.5rem;
     display: flex;
     flex-direction: row;
@@ -335,6 +335,155 @@ body{
         width: 100%;
     }
 }
+.questions{
+    margin-top: 2.5rem;
+    margin: 0 auto;
+    max-width:500px;
+    height: auto;
+    margin-bottom: 6rem;
+    button{
+        display: block;
+        border: none;
+        border-radius: 5px;
+        height: 3rem;
+        width: 100px;
+        background-color: var(--SoftBlue);
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+        margin: 0 auto;
+        margin-top: 3rem;
+    
+    }
+}
+.questions .title{
+    color: var(--VeryDarkBlue);
+    text-align: center;
+
+}
+.questions .paragrap{
+    text-align: center;
+    width: 80%;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+    margin-top: 1rem;
+    color: var(--GrayishBlue);
+}
+.questions__preg{
+    width: 80%;
+    margin: 0 auto;
+}
+.questions__preg--click figure{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 75px;
+    border-bottom: solid 1px var(--GrayishBlue);
+    h4{
+        align-self: center;
+        font-weight: 400;
+        font-size: 15px;
+        cursor: pointer;
+    }
+    
+    
+}
+.questions__preg--click figure img{
+    width: 22px;
+    height: 15px;
+    align-self: center;
+    cursor: pointer;
+}
+
+.formulario{
+    max-width: 100%;
+    margin: 0 auto;
+    background-color: var(--SoftBlue);
+    text-align: center;
+    height: 350px;
+    padding: 4rem  1.5rem 3rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: white;
+    
+}
+.formulario__text{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+   
+    cite{
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        font-size: 12px;
+    }
+    h3{
+        font-size: 25px;
+    }
+    
+}
+.formulario__input{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5px;
+    height: 30%;
+    flex-grow: 1;
+    button,
+    input{
+        height: 35%;
+        padding-left: 15px;
+        border-radius: 7px;
+        border: none;
+    }
+    input::placeholder{
+        font-size: larger;
+        position: relative;      
+    }
+    button{
+        border: none;
+        background-color: var(--SoftRed);
+        color: white;
+        font-size: 16px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+}
+.foter{
+    margin: 0 auto;
+    max-width: 100%;
+    background-color: var(--VeryDarkBlue);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    height: 350px;
+    
+    img,
+    p{
+        cursor: pointer;
+    }
+    
+}
+.foter div{
+    display: flex;
+    gap: 25px;
+}
+#lgfff path{
+    fill: white;
+
+}
+
+
+
+
+
 .deactive{
     display: none;
 }
