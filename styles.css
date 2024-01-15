@@ -17,6 +17,7 @@
 body{
   
     margin-top: 2rem;
+   
 }
 
 
@@ -32,10 +33,16 @@ body{
     z-index: 1;
 }
 .Header img:nth-child(2){
+    position: relative;
     cursor: pointer;
+    z-index: 2;
+   
+    
+    
+   
 }
 .Header__nav{
-    position: absolute;
+    position: fixed;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -45,9 +52,10 @@ body{
     left: 0;
     bottom: 0;
     top: 0;
-    background-color: var(--VeryDarkBlue);
-    z-index:1;
-    display: none;
+    background-color: hsla(229, 31%, 21%, 0.704);
+    z-index: 1;
+   
+   
    
 }
 .Header__nav p{
@@ -55,7 +63,7 @@ body{
     height: 5rem;
     width: 100%;
     text-align: center;
-    top: 100px;
+    top: 125px;
     display: flex;
     color: white;
     align-items: center;
@@ -78,7 +86,7 @@ body{
     height: 3rem;
     width: 100%;
     text-align: center;
-    top: 100px;
+    top: 125px;
     display: flex;
     color: white;
     align-items: center;
@@ -89,6 +97,23 @@ body{
     cursor: pointer;
 }
 
+
+
+#logo{
+    
+    #black{
+        fill:hsla(229, 31%, 21%, 0.756) ;
+    }
+    path{
+        fill: white;
+    }
+    circle{
+        fill: white;
+    }
+    z-index: 2;
+    
+
+}
 .Simple{
     max-width: 500px;
     height: auto;
@@ -225,7 +250,7 @@ body{
     height: 100%;
     display: flex;
     align-items: center;
-    border-bottom: 4px solid  orangered;
+    border-bottom: 4px solid  var(--SoftRed);
     color: var(--VeryDarkBlue);
 }
 .Tremnu__contain--nav div:nth-child(3){
@@ -385,9 +410,7 @@ body{
         font-weight: 400;
         font-size: 15px;
         cursor: pointer;
-    }
-    
-    
+    } 
 }
 .questions__preg--click figure img{
     width: 22px;
