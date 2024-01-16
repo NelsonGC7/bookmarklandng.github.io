@@ -8,14 +8,22 @@ const landing = {
     questions: document.querySelectorAll('.questions figure'),
     
 }
+
+
+console.log(landing.questions)
 landing.questions.forEach(preg =>{
+
     preg.addEventListener('click',(e)=>{
         if(e.target.localName == 'h4' || e.target.localName == 'img' ){
             if(preg.children[1].getAttribute('src') === './images/icon-arrow.svg'){
-                preg.children[1].src = './images/icon-arrowClose.svg'
+                preg.children[1].src = './images/icon-arrowClose.svg';
+                preg.nextElementSibling.classList.remove('deactive')
+                
+                
                 
             }else{
                 preg.children[1].src = './images/icon-arrow.svg';
+                preg.nextElementSibling.classList.add('deactive')
             };
     
             
