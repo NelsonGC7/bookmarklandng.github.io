@@ -52,7 +52,7 @@ body{
     left: 0;
     bottom: 0;
     top: 0;
-    background-color: hsla(229, 31%, 21%, 0.704);
+    background-color: hsla(229, 31%, 21%, 0.875);
     z-index: 1;
    
    
@@ -100,7 +100,6 @@ body{
 
 
 #logo{
-    
     #black{
         fill:hsla(229, 31%, 21%, 0.756) ;
     }
@@ -281,7 +280,7 @@ body{
 
 .Tremnu__imgs{
     width: 100%;
-    height: 250px;
+    height: auto;
     position: relative;
     margin-bottom: 2rem;  
 }
@@ -497,6 +496,10 @@ body{
 .foter div{
     display: flex;
     gap: 25px;
+    z-index: 2;
+    img{
+        width: 35px;
+    }
 }
 #lgfff path{
     fill: white;
