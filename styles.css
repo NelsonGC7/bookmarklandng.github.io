@@ -23,23 +23,24 @@ body{
 
 
 .Header{
-    width: 85%;
+    max-width: 750px;
     margin: 0 auto;
-    height: 2.5rem;
+    padding: 0 10%;
+    height: auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     z-index: 1;
+   
+    
 }
+
 .Header img:nth-child(2){
     position: relative;
     cursor: pointer;
     z-index: 2;
-   
-    
-    
-   
+    width: 30px;  
 }
 .Header__nav{
     position: fixed;
@@ -60,7 +61,7 @@ body{
 }
 .Header__nav p{
     position: relative;
-    height: 5rem;
+    height: 6rem;
     width: 100%;
     text-align: center;
     top: 125px;
@@ -84,10 +85,10 @@ body{
     text-transform: uppercase;
     position: relative;
     background-color: transparent;
-    height: 3rem;
+    height: 4.5rem;
     width: 100%;
     text-align: center;
-    top: 125px;
+    top: 135px;
     display: flex;
     color: white;
     align-items: center;
@@ -96,13 +97,17 @@ body{
     font-size: 30px;
     font-weight: 400;
     cursor: pointer;
+    border:solid 2px white;
+    &:hover{
+        background-color: var(--VeryDarkBlue);
+        border: solid 4px white;
+    }
 }
 
-
-
 #logo{
+    width: 200px;
     #black{
-        fill:hsla(229, 31%, 21%, 0.756) ;
+        fill:hsla(229, 31%, 21%, 0.974);
     }
     path{
         fill: white;
@@ -114,23 +119,24 @@ body{
     
 
 }
+
 .Simple{
-    max-width: 500px;
+    max-width: 750px;
     height: auto;
-    margin-bottom: 10rem;
     margin: 0 auto;
+    margin-bottom: 10rem;
+    
     
 }
 .Simple__contain{
-    margin-top: 2.5rem;
+    margin-top: 4.4rem;
     position: relative;
     width: 100%;
-    height: 250px;   
+    height: auto;   
 }
 
 .Simple .Simple__contain img{
-    position: relative;
-    left: -25px;
+   
     width: 90%;
     display: block;
     margin: 0 auto;
@@ -139,7 +145,7 @@ body{
     position:absolute;
     top: 25%;
     right: 0;
-    min-height: 180px;
+    min-height: 280px;
     width: 80%;
     border-radius: 0 0 0 100px;
     background-color: var(--SoftBlue);
@@ -147,6 +153,7 @@ body{
 }
 
 .Simple__text{
+    margin: 0 auto;
     margin-top: 2.5rem;
     max-width: 500px;
     display: flex;
@@ -154,18 +161,22 @@ body{
     gap: 1.5rem;
 }
 .Simple__text h2{
+    font-size: 38px;
     font-weight: 600;
-    width: 80%;
+    width: auto;
     margin: 0 auto;
     text-align: center;
     color: var(--VeryDarkBlue);
 }
 .Simple__text p{
+    font-size: 1.2rem;
     width: 80%;
     margin: 0 auto;
+    margin-top: 10px;
     text-align: center;
     color: var(--GrayishBlue);
-    line-height: 22px;
+    line-height: 25px;
+    text-wrap: balance;
 }
 .Simple__contain--btones{
     height: auto;
@@ -174,14 +185,17 @@ body{
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
+    margin-top: 25px;
 }
 .Simple__contain--btones button{
-    height: 45px;
+    height: 4rem;
+    font-size: 18px;
     width: 47%;
     color: white;
     border: none;
     border-radius: 5px;
-    background-color: var(--SoftBlue);  
+    background-color: var(--SoftBlue);
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.249);
 }
 
 .Simple__contain--btones  button + button{
@@ -189,11 +203,12 @@ body{
     color: var(--VeryDarkBlue);
 }
 .Tremnu{
-    max-width: 500px;
+    max-width: 750px;
     height: auto;
     margin: 0 auto;
 }
 .Tremnu__text{
+    
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -206,9 +221,11 @@ body{
         margin: 0 auto;
         color: var(--GrayishBlue);
         font-weight: 400;
+        font-size: 1.2rem;
     }
     & h2{
         color: var(--VeryDarkBlue);
+        font-size: 35px;
     
     }
 }
@@ -222,7 +239,7 @@ body{
 
 }
 .Tremnu__contain--nav div{
-    height: 4rem;
+    height: 4.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -231,6 +248,7 @@ body{
     color: var(--GrayishBlue); 
     p{
      cursor: pointer;
+     font-size: 1.3rem;
     }
     &:hover{
         background-color: hsla(229, 8%, 60%, 0.307);
@@ -263,43 +281,48 @@ body{
     flex-direction: column;
     line-height: 22px;
     text-align: center;
-    margin-bottom: 8rem;
+    margin-bottom: 4.5rem;
     line-height: 24px;
     h3{
         color: var(--VeryDarkBlue);
         font-weight: 600;
-        font-size: x-large;
+        font-size: xx-large;
         margin-bottom: 1rem;
     }
     p{
         width: 80%;
         justify-self:center ;
+        font-size: 1.2rem;
+        line-height: 28px;
         margin: 0 auto;
         color: var(--GrayishBlue);
     }
 }
 
 .Tremnu__imgs{
-    width: 100%;
+    width: 80%;
     height: auto;
     position: relative;
-    margin-bottom: 2rem;  
+    margin: 0 auto;
+    margin-bottom: 5rem; 
+   
 }
 
 .Tremnu__imgs img{
-    width: 80%;
+    width: 85%;
     margin: 0 auto;
-    min-height: 200px;
+    height: auto;
 }
 .Tremnu__imgs figure{
     position:absolute;
-    top: 14%;
+    top: 24%;
     left: -100px;
-    min-height: 200px;
+    min-height: 260px;
     width: 100%;
     border-radius: 0 0 100px 0;
     background-color: var(--SoftBlue);
     z-index: -1;
+    
 }
 .cards{
     max-width: 500px;
@@ -313,18 +336,23 @@ body{
 }
 .cards h3{
     color: var(--VeryDarkBlue);
+    font-size: xx-large;
 }
 .cards p{
     width: 80%;
     color: var(--GrayishBlue);
-    margin-bottom: 2.5rem;
+    margin-bottom: 3.2rem;
+    font-size: 1.2rem;
+    margin-top: 15px;
     
 }
 .cards__contein{
     width: 100%;
     display: flex;
     flex-direction: column;
-    gap: 2rem;
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+    
     strong{
         display: block;
     
@@ -332,14 +360,15 @@ body{
 }
 .cards__contein--card{
     margin: 0 auto;
-    padding: 2.5rem 0 1rem 0;
-    width: 80%;
+    padding: 2.5rem 0 1.8rem 0;
+    min-width: 300px;
     border-radius: 16px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
-    height: 350px;
+    height: 380px;
+    box-shadow: 2px 15px 8px 0 rgba(0, 0, 0, 0.122),-2px 15px 8px 0 rgba(0, 0, 0, 0.122);
     button{
         height: 45px;
         width: 80%;
@@ -370,11 +399,11 @@ body{
         display: block;
         border: none;
         border-radius: 5px;
-        height: 3rem;
-        width: 100px;
+        height: 4.5rem;
+        min-width: 150px;
         background-color: var(--SoftBlue);
         color: white;
-        font-size: 16px;
+        font-size: 22px;
         font-weight: 600;
         cursor: pointer;
         margin: 0 auto;
@@ -385,14 +414,17 @@ body{
 .questions .title{
     color: var(--VeryDarkBlue);
     text-align: center;
+    font-size: 40px;
 
 }
 .questions .paragrap{
+    font-size: 1.2rem;
     text-align: center;
+    line-height: 28px;
     width: 80%;
     margin: 0 auto;
     margin-bottom: 2rem;
-    margin-top: 1rem;
+    margin-top: 2rem;
     color: var(--GrayishBlue);
 }
 .questions__preg{
@@ -405,8 +437,9 @@ body{
     p{
         text-wrap: balance;
         color: var(--GrayishBlue);
-        line-height: 25px;
+        line-height: 30px;
         margin-bottom: 1.8rem;
+        font-size: 1.2rem;
     
     }
 }
@@ -429,7 +462,7 @@ body{
     h4{
         align-self: center;
         font-weight: 400;
-        font-size: 15px;
+        font-size: 20px;
         cursor: pointer;
     } 
 }
@@ -445,8 +478,9 @@ body{
     margin: 0 auto;
     background-color: var(--SoftBlue);
     text-align: center;
-    height: 350px;
+    height: 425px;
     padding: 4rem  1.5rem 3rem 1.5rem;
+    gap: 25px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -462,10 +496,10 @@ body{
     cite{
         text-transform: uppercase;
         letter-spacing: 2px;
-        font-size: 12px;
+        font-size: 20px;
     }
     h3{
-        font-size: 25px;
+        font-size: 35px;
     }
     
 }
@@ -473,18 +507,17 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    gap: 5px;
-    height: 30%;
-    flex-grow: 1;
+    gap: 15px;
+    
     button,
     input{
-        height: 35%;
+        height: 75px;
         padding-left: 15px;
         border-radius: 7px;
         border: none;
     }
     input::placeholder{
-        font-size: larger;
+        font-size: x-large;
         position: relative;      
     }
     button{
@@ -512,6 +545,7 @@ body{
     img,
     p{
         cursor: pointer;
+        font-size: 25px;
     }
     
 }
@@ -520,7 +554,7 @@ body{
     gap: 25px;
     z-index: 2;
     img{
-        width: 35px;
+        width: 45px;
     }
 }
 #lgfff path{
@@ -535,15 +569,30 @@ body{
 .deactive{
     display: none;
 }
-@media(min-width:425px){
-    .Header{
-        max-width: 500px;
+
+@media(max-width:375px){
+    body h2{
+        font-size: 1.8rem !important;
     }
-    .Simple .Simple__contain .Simple__contain--blue{
-        min-height: 225px;
+    body h3{
+        font-size: 1.5rem !important;
     }
-    .Simple__text{
-        margin-top: 5rem;
+    body p{
+        font-size: 1rem !important;
     }
     
+    
+    .Simple .Simple__contain .Simple__contain--blue{
+        min-height: 180px;
+    }
+    .Header img:nth-child(2){
+        width: 22px;
+    
+    }
+    .Tremnu figure{
+        min-height: 190px;
+    
+    }
+
+
 }
