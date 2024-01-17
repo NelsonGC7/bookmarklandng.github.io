@@ -18,8 +18,12 @@ body{
   
     margin-top: 2rem;
    
+   
 }
+html{
+    overflow-x: hidden;
 
+}
 
 
 .Header{
@@ -42,6 +46,7 @@ body{
     z-index: 2;
     width: 30px;  
 }
+
 .Header__nav{
     position: fixed;
     display: flex;
@@ -59,6 +64,7 @@ body{
    
    
 }
+
 .Header__nav p{
     position: relative;
     height: 6rem;
@@ -121,7 +127,7 @@ body{
 }
 
 .Simple{
-    max-width: 750px;
+    max-width: 800px;
     height: auto;
     margin: 0 auto;
     margin-bottom: 10rem;
@@ -155,7 +161,7 @@ body{
 .Simple__text{
     margin: 0 auto;
     margin-top: 2.5rem;
-    max-width: 500px;
+    max-width: 750px;
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
@@ -163,7 +169,7 @@ body{
 .Simple__text h2{
     font-size: 38px;
     font-weight: 600;
-    width: auto;
+    width: 80%;
     margin: 0 auto;
     text-align: center;
     color: var(--VeryDarkBlue);
@@ -175,7 +181,7 @@ body{
     margin-top: 10px;
     text-align: center;
     color: var(--GrayishBlue);
-    line-height: 25px;
+    line-height: 35px;
     text-wrap: balance;
 }
 .Simple__contain--btones{
@@ -187,7 +193,20 @@ body{
     justify-content: space-between;
     margin-top: 25px;
 }
-.Simple__contain--btones button{
+#bton2{
+    background-color: #f0f0f0;
+    color: var(--VeryDarkBlue);
+    height: 4rem;
+    font-size: 18px;
+    width: 47%;
+    color: var(--VeryDarkBlue);
+    border: none;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.249);
+    cursor: pointer;
+}
+
+#bton{
     height: 4rem;
     font-size: 18px;
     width: 47%;
@@ -196,19 +215,26 @@ body{
     border-radius: 5px;
     background-color: var(--SoftBlue);
     box-shadow: 0 5px 5px 0 rgba(0, 0, 0, 0.249);
+    cursor: pointer;
+    &:hover{
+        background-color: #f0f0f0;
+        color: var(--VeryDarkBlue);
+    }
 }
 
-.Simple__contain--btones  button + button{
-    background-color: #f0f0f0;
-    color: var(--VeryDarkBlue);
+#bton:hover + #bton2{
+    background-color: var(--SoftBlue);
+    color: white;
 }
+
+
+
 .Tremnu{
     max-width: 750px;
     height: auto;
     margin: 0 auto;
 }
 .Tremnu__text{
-    
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -222,11 +248,11 @@ body{
         color: var(--GrayishBlue);
         font-weight: 400;
         font-size: 1.2rem;
+        line-height: 32px;
     }
     & h2{
         color: var(--VeryDarkBlue);
         font-size: 35px;
-    
     }
 }
 .Tremnu__contain--nav{
@@ -235,8 +261,6 @@ body{
     align-items: center;
     margin-bottom: 4rem;
     font-weight: 500;
-    
-
 }
 .Tremnu__contain--nav div{
     height: 4.5rem;
@@ -253,13 +277,7 @@ body{
     &:hover{
         background-color: hsla(229, 8%, 60%, 0.307);
         border-radius: 25px;
-        & + div{
-            border: none;
-            & + div{
-                border: none;
-            
-            }
-        }
+        
     
     }
 }
@@ -293,7 +311,7 @@ body{
         width: 80%;
         justify-self:center ;
         font-size: 1.2rem;
-        line-height: 28px;
+        line-height: 32px;
         margin: 0 auto;
         color: var(--GrayishBlue);
     }
@@ -319,7 +337,7 @@ body{
     left: -100px;
     min-height: 260px;
     width: 100%;
-    border-radius: 0 0 100px 0;
+    border-radius: 0 50px 100px 0;
     background-color: var(--SoftBlue);
     z-index: -1;
     
@@ -331,7 +349,7 @@ body{
     flex-direction: column;
     align-items: center;
     text-align: center;
-    line-height: 26px;  
+    
     margin: 0 auto;
 }
 .cards h3{
@@ -344,6 +362,7 @@ body{
     margin-bottom: 3.2rem;
     font-size: 1.2rem;
     margin-top: 15px;
+    line-height: 35px;  
     
 }
 .cards__contein{
@@ -368,6 +387,7 @@ body{
     align-items: center;
     justify-content: space-between;
     height: 380px;
+    line-height: 10px;
     box-shadow: 2px 15px 8px 0 rgba(0, 0, 0, 0.122),-2px 15px 8px 0 rgba(0, 0, 0, 0.122);
     button{
         height: 45px;
@@ -541,7 +561,6 @@ body{
     justify-content: center;
     gap: 30px;
     height: 350px;
-    
     img,
     p{
         cursor: pointer;
@@ -570,7 +589,7 @@ body{
     display: none;
 }
 
-@media(max-width:375px){
+@media(max-width:500px){
     body h2{
         font-size: 1.8rem !important;
     }
@@ -594,5 +613,129 @@ body{
     
     }
 
+
+}
+
+@media (min-width:750px){
+   
+    
+    #burger{
+     display: none;
+    
+    }
+    .Header{
+        padding: 0 10%;
+        max-width: 1300px;
+    }
+    .Header__nav{
+        position:static;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+        gap: 10px;
+        height: auto;
+        width: 50%;
+        background-color: transparent;
+        padding: 0;
+        
+       
+        
+        
+        p{  
+            width: auto;
+            position: static;
+            height: auto;
+            font-size: 14px;
+            border: none;
+            color: var(--VeryDarkBlue);
+            display: block;
+            
+        }
+        button{
+            width:100px;
+            position: static;
+            height: auto;
+            display: block;
+            font-size: 14px;
+            height: 40px;
+            background-color: var(--SoftRed);
+            border: none;
+            margin: 0;
+            box-shadow: 0 3px 2px 0 rgba(0, 0, 0, 0.122);
+            &:hover{
+                background-color: transparent;
+                color: var(--SoftRed);
+                border: solid 2px var(--SoftRed);
+            
+            }
+            
+        }
+        
+    }
+    .Header__nav p:nth-child(3){
+        border-bottom: none;
+    }
+    
+
+}
+@media(min-width:1024px){
+    .Simple{
+        max-width: 1300px;
+        margin-top: 4.5rem;
+        display: flex;
+        margin-bottom: 4.5rem;
+        
+    }
+    .Simple__text{
+        margin-top: 0;
+        width: 50%;
+        order: 1;
+    }
+    .Simple__contain{
+        width: 50%;
+        order: 2;
+        margin: 0;
+    
+    }
+    .Simple .Simple__contain img{
+        margin: 0 0;
+        width: 105%;
+    
+    }
+    .Simple .Simple__contain .Simple__contain--blue{
+        min-height: 350px;
+        width: 90%;
+        right: -125px;
+        
+    
+    
+    }
+    .Tremnu{
+        max-width: 1300px;
+        padding: 0 2rem;
+        
+    }
+    .Tremnu__text
+    .Tremnu__contain--nav div:nth-child(3){
+        border-bottom: solid 2px var(--GrayishBlue);
+    }
+    .Tremnu__contain--nav{
+        max-width: 100%;
+        flex-direction: row;
+        div{
+            border-top: none;
+            border-bottom: solid 2px var(--GrayishBlue);
+        }
+        
+    
+    }
+    .Tremnu__text{
+        margin-top: 0;
+    
+    }
+
+    
+    
 
 }
