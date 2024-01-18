@@ -541,12 +541,13 @@ body{
         height: 75px;
         padding-left: 15px;
         border-radius: 7px;
-        border: none;
+       
     }
     input::placeholder{
         font-size: x-large;
         position: relative;      
     }
+    
     button{
         border: none;
         background-color: var(--SoftRed);
@@ -554,6 +555,12 @@ body{
         font-size: 16px;
         font-weight: 600;
         cursor: pointer;
+        &:hover{
+            background-color: white;
+            color: var(--SoftRed);
+            border: 2px solid var(--SoftRed);
+        
+        }
     }
 
 }
@@ -567,7 +574,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 30px;
-    height: 350px;
+    height: 350px:
     img,
     p{
         cursor: pointer;
@@ -587,6 +594,18 @@ body{
     fill: white;
 
 }
+.input-error{
+    background-image: url('./images/icon-error.svg');
+    background-repeat: no-repeat;
+    background-position: right 10px center; /* Ajusta la posición según sea necesario */
+    background-size: 20px; /* Ajusta el tamaño según sea necesario */
+    border: solid 4px var(--SoftRed) ;
+    &:focus{
+     border: solid 4px var(--SoftRed);
+    
+    }
+  }
+
 
 
 
@@ -632,7 +651,6 @@ body{
         width: 50%;
         background-color: transparent;
         padding: 0;
-        
         p{  
             width: auto;
             position: static;
@@ -668,8 +686,7 @@ body{
         border-bottom: none;
     }
     #burger{
-     display: none;
-    
+        display: none;
     }
     .Header{
         padding: 0 10%;
@@ -679,7 +696,6 @@ body{
 
 
 @media(min-width:1024px){
-
     body{
         overflow-x:hidden;
     }
@@ -722,7 +738,7 @@ body{
         padding: 0 2rem;
         
     }
-    .Tremnu__text
+    
     .Tremnu__contain--nav div:nth-child(3){
         border-bottom: solid 2px var(--GrayishBlue);
     }
@@ -748,8 +764,7 @@ body{
             grid-area: h3;
             width: 80%;
             height: 20%;
-            margin: 0 auto;
-           
+            margin: 0 auto; 
         }
         p{
             height:200px;
@@ -763,7 +778,6 @@ body{
         display: flex;
         align-items: center;
         justify-content: center;
-        
         margin-top: 25px;
         border-radius: 8px;
         box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.249);
@@ -776,7 +790,9 @@ body{
     
     
     .Tremnu__text{
+        margin: 0 auto;
         margin-top: 0;
+         width: 80%;
     }
     
     .Tremnu__imgs figure{
@@ -791,23 +807,58 @@ body{
         flex-direction: row;
         height: 30rem;
         gap: 0;
-
     }
     .card1{
-        align-self: flex-start;  
-        
+        align-self: flex-start;    
     }
     .card2{
         align-self: center;
         margin: 0;
     }
+    
     .card3{
         align-self: flex-end;
-    
     }
         
     .deactive{
         display: none;
-    } 
+    }
+    .questions{
+        max-width:800px;
+    }
+    .questions__preg{
+        max-width: 600px;
+    
+    }
+    .formulario{
+        height: auto;
+    }
+    .formulario__input{
+        flex-direction: row;
+        width: 55%;
+        margin: 0 auto; 
+        justify-content: space-between;
+        input{
+            flex-grow: 2;
+        }
+        button{
+            flex-grow: 1;
+            padding: 0;
+            
+        }
+        
+    }
+    .foter{
+        flex-direction: row;
+        height: 5rem;
+        justify-content: space-evenly;
+        img,
+        p{
+             cursor: pointer;
+        
+        }
+        
+        
+    }
 }
 

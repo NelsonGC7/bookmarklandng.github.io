@@ -17,14 +17,33 @@ bton2.addEventListener('mouseleave',()=>{
  })
 
 
-const EventWindow = ()=>{
-    var  width = window.innerWidth;
- if(width >=1024){
-    
- 
- 
- }
+
+    // Función para validar el input
+function validateInput() {
+    const input = document.querySelector('.formulario__input input');
+    const value = input.value.trim();
+  
+    if (value === '' || !isValidEmail(value)) {
+      // Si el input está vacío o el email no es válido, añade la clase de error
+      input.classList.add('input-error');
+    } else {
+      // Si no hay error, asegúrate de quitar la clase de error
+      input.classList.remove('input-error');
+    }
+  }
+  
+  // Función para comprobar si el email es válido
+  function isValidEmail(email) {
+    const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return regex.test(email);
+  }
+  
+  // Agrega un detector de eventos para cuando el formulario intenta ser enviado
+  const form = document.querySelector('.formulario');
+  form.addEventListener('submit', function(event) {
+    event.preventDefault(); // Previene el envío del formulario
+    validateInput(); // Valida el input
+  });
     
 
 
-}
