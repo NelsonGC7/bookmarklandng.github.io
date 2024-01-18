@@ -15,15 +15,12 @@
 }
 
 body{
-  
+    
     margin-top: 2rem;
-   
-   
-}
-html{
     overflow-x: hidden;
-
+   
 }
+
 
 
 .Header{
@@ -125,6 +122,10 @@ html{
     
 
 }
+.deactive1{
+    display: none;
+}
+
 
 .Simple{
     max-width: 800px;
@@ -369,9 +370,11 @@ html{
     width: 100%;
     display: flex;
     flex-direction: column;
+    align-content: center;
+    justify-content: center;
     gap: 2.5rem;
     margin-bottom: 2rem;
-    
+    height: auto;
     strong{
         display: block;
     
@@ -388,7 +391,7 @@ html{
     justify-content: space-between;
     height: 380px;
     line-height: 10px;
-    box-shadow: 2px 15px 8px 0 rgba(0, 0, 0, 0.122),-2px 15px 8px 0 rgba(0, 0, 0, 0.122);
+    box-shadow: 2px 15px 6px 0 rgba(0, 0, 0, 0.052),-2px 15px 6px 0 rgba(0, 0, 0, 0.052);
     button{
         height: 45px;
         width: 80%;
@@ -404,10 +407,14 @@ html{
     }
 }
 .cards__contein--card div{
-    width:100%;
+   width: 100%;
     p{
         width: 100%;
     }
+}
+.deactive{
+    display: none;
+
 }
 .questions{
     margin-top: 2.5rem;
@@ -585,10 +592,6 @@ html{
 
 
 
-.deactive{
-    display: none;
-}
-
 @media(max-width:500px){
     body h2{
         font-size: 1.8rem !important;
@@ -617,16 +620,7 @@ html{
 }
 
 @media (min-width:750px){
-   
     
-    #burger{
-     display: none;
-    
-    }
-    .Header{
-        padding: 0 10%;
-        max-width: 1300px;
-    }
     .Header__nav{
         position:static;
         display: flex;
@@ -638,9 +632,6 @@ html{
         width: 50%;
         background-color: transparent;
         padding: 0;
-        
-       
-        
         
         p{  
             width: auto;
@@ -676,10 +667,28 @@ html{
     .Header__nav p:nth-child(3){
         border-bottom: none;
     }
+    #burger{
+     display: none;
     
-
+    }
+    .Header{
+        padding: 0 10%;
+        max-width: 1300px;
+    }
 }
+
+
 @media(min-width:1024px){
+
+    body{
+        overflow-x:hidden;
+    }
+    
+    
+    .Header__nav p:nth-child(3){
+        border-bottom: none;
+    }
+    
     .Simple{
         max-width: 1300px;
         margin-top: 4.5rem;
@@ -707,9 +716,6 @@ html{
         min-height: 350px;
         width: 90%;
         right: -125px;
-        
-    
-    
     }
     .Tremnu{
         max-width: 1300px;
@@ -730,12 +736,78 @@ html{
         
     
     }
+    .slides{
+        display: grid;
+        height: 425px;
+        grid-template-columns: repeat(2,1fr);
+        text-align: left;
+        margin-bottom: 0;
+        grid-template-areas: 
+        "img  h3";
+        h3{
+            grid-area: h3;
+            width: 80%;
+            height: 20%;
+            margin: 0 auto;
+           
+        }
+        p{
+            height:200px;
+            position: relative;
+            top: 100px;
+            grid-area: h3;
+        }
+    }
+    .slides p::after{
+        content: "More Info";
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        margin-top: 25px;
+        border-radius: 8px;
+        box-shadow: 0 3px 3px 0 rgba(0, 0, 0, 0.249);
+        height: 50px;
+        width: 100px;
+        background-color: var(--SoftBlue);
+        color: #f0f0f0;
+        cursor: pointer;
+    }
+    
+    
     .Tremnu__text{
         margin-top: 0;
+    }
+    
+    .Tremnu__imgs figure{
+        left: -300px;
+        max-height: 325px;
+    }
+    .cards{
+        max-width: 1300px;
+        position: relative;
+    }
+    .cards__contein{
+        flex-direction: row;
+        height: 30rem;
+        gap: 0;
+
+    }
+    .card1{
+        align-self: flex-start;  
+        
+    }
+    .card2{
+        align-self: center;
+        margin: 0;
+    }
+    .card3{
+        align-self: flex-end;
     
     }
-
-    
-    
-
+        
+    .deactive{
+        display: none;
+    } 
 }
+

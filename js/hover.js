@@ -15,3 +15,16 @@ bton2.addEventListener('mouseleave',()=>{
     bton1.style.backgroundColor = ''
     bton1.style.color = ''
  })
+
+
+const EventWindow = ()=>{
+    var  width = window.innerWidth;
+ if(width >=1024){
+    
+ 
+ 
+ }
+    
+
+
+}

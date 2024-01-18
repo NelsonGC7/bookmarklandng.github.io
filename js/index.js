@@ -79,7 +79,7 @@ const clickSlide = ()=>{
 
 const clickMenu = ()=>{
     landing.burger.addEventListener('click',()=>{
-        landing.nav.classList.toggle('deactive')
+        landing.nav.classList.toggle('deactive1')
         if(landing.burger.getAttribute('src') == './images/icon-hamburger.svg'){
             landing.burger.src =  './images/icon-close.svg';
             document.querySelector('body').style.overflow = 'hidden';
